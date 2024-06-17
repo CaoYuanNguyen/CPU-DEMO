@@ -1,0 +1,152 @@
+/* /pTable: Process table/
+/qTable: Quantum time table/
+/cTable: CPU Time table/
+/aTable: Algorithm table/
+/dTable: Data table/
+/gTable: Graph table/ */
+
+
+div.inputZone {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    position: sticky;
+    top: 0; 
+    background-color: white; 
+    padding: 10px 0; 
+}
+
+@media (max-width: 800px) {
+    div.inputZone {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+div.inputZone div {
+    padding-left: 20px;
+}
+
+div.graphZone {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+
+table.qTable,
+table.aTable,
+table.cTable {
+    width: 140px;
+    height: auto;
+}
+
+table.pTable {
+    width: 375px;
+    height: auto;
+}
+
+table.dTable {
+    width: 480px;
+    height: auto;
+}
+
+table.gTable {
+    width: auto;
+    height: auto;
+}
+
+/* Tab containers with overflow handling */
+#pTab {
+    min-width: 400px;
+    height: 255px;
+    overflow-y: scroll;
+}
+
+#gTab {
+    min-width: 1520px;
+    overflow-x: scroll;
+}
+
+/* General table styling */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-spacing: 0;
+}
+
+th,
+td {
+    width: 125px;
+    height: 35px;
+    font-size: 18px;
+    text-align: center;
+}
+
+th {
+    background-color: rgba(190, 220, 255, 1.0);
+}
+
+td:hover {
+    background-color: rgba(0, 0, 175, 0.3);
+}
+
+/* Specific table styling */
+table.pTable thead tr {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Background to prevent overlap issues */
+}
+
+table.pTable tbody tr#pButRow {
+    position: sticky;
+    bottom: 0;
+    background-color: white; /* Background to prevent overlap issues */
+}
+
+table.gTable th,
+table.gTable td {
+    min-width: 56.4px;
+    width: 56.4px;
+    height: 56.4px;
+    text-align: center;
+}
+
+/* Input styles */
+.inVal {
+    text-align: center;
+    width: 100%; /* Full width input fields */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Button styles */
+.button {
+    background-color: #e7e7e7;
+    color: black;
+    border-radius: 12px;
+    padding: 3px 13px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: #555555;
+    color: white;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+}
+
+/* Warning message */
+h2 {
+    color: red;
+}

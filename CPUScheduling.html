@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<html>
+	<head>
+		<meta charset="UTF-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="Style.css">
+		<script src="Main.js"></script>
+		<title>CPU Scheduling Algorithm</title>
+	</head>
+
+	<body>
+		<h1>CPU SCHEDULING ALGORITHM</h1>
+		<div class="inputZone">
+			<div id="pTab">
+ 				<table class="pTable">
+					<thead>
+						<tr>
+							<th>Process</th>
+							<th>Arrival Time</th>
+							<th>Burst Time</th>
+						</tr>
+					</thead>
+					<tbody id="pTableBody">
+						<tr>
+							<th>P1</th>
+							<td>
+								<input type="number" name="a1" id="a1" size="10" min="-1" max="20" value="-1" class="inVal">
+							</td>
+							<td>
+								<input type="number" name="b1" id="b1" size="10" min="0" max="20" value="0" class="inVal">
+							</td>
+						</tr>
+						<tr id="pButRow">
+							<th></th>
+							<th>
+								<button class="button" onClick="runAddRow()">Add Row</button>
+							</th>
+							<th>
+								<button class="button" onClick="runDelRow()">Delete Row</button>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<table class="qTable">
+					<tr>
+						<th>Quantum Time</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="number" name="qTime" id="q1" size="10" min="0" value="0" class="inVal">
+						</td>
+					</tr>
+				</table>
+				<br>
+				<table class="aTable">
+					<tr>
+						<th colspan="2">Algorithm</th>
+					</tr>
+					<tr>
+						<td>
+							<button class="button" onClick="runFCFS()">FCFS</button>
+						</td>
+						<td>
+							<button class="button" onClick="runSJF()">SJF</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button class="button" onClick="runSRTF()">SRTF</button>
+						</td>
+						<td>
+							<button class="button" onClick="runRR()">RR</button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button class="button" onClick="runReset(0)">Reset All</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<br>
+
+		<h2 id="n1"></h2>
+		<div class="graphZone">
+			<div id="gTab">
+				<table class="gTable" id="gTable">
+					<tbody id="gTableBody">
+						<tr id="row0">
+							<th>CPU</th>
+						</tr>
+						<tr id="row1">
+							<th>P1</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<br>
+<!--
+		<div class="dataZone" id="d1" style="/*background-color:lightpink;*/">
+			<table class="dTable" id="dTable">
+				<thead>
+					<tr>
+						<th>Process</th>
+						<th>Respond Time</th>
+						<th>Waiting Time</th>
+						<th>Turnaround Time</th>
+					</tr>
+				</thead>
+				<tbody id="dTableBody">
+					<tr>
+						<th>P1</th>
+						<td id="r1">0</td>
+						<td id="w1">0</td>
+						<td id="t1">0</td>
+					</tr>
+					<tr id="dAVGRow" style="background-color:rgba(255,140,110,1.0);">
+						<th>Average</th>
+						<td id="rAVG">0</td>
+						<td id="wAVG">0</td>
+						<td id="tAVG">0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>-->
+	</body>
+</html>
